@@ -14,6 +14,6 @@ namespace IVS_ShopOnCoreMvc.Data.Models
 
         public string description { set; get; }
 
-        public IEnumerable<IVehicles> vehicles { set; get; }
+        public List<Vehicle> vehicles { set; get; }
     }
 }

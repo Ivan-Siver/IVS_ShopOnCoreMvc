@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IVS_ShopOnCoreMvc.Data.Models
 {
-    public class Car : IVehicles
+    public class Vehicle
     {
         public Guid id { set; get; }
 
@@ -24,8 +24,11 @@ namespace IVS_ShopOnCoreMvc.Data.Models
         /// Flag for show on home-page
         /// </summary>
         public bool isFavourite { set; get; }
-
-        public int available { set; get; }
+        
+        /// <summary>
+        /// Признак доступности транспортного средства
+        /// </summary>
+        public bool available { set; get; }
 
         public int categoryId { set; get; }
 
