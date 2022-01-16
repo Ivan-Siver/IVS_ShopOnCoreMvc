@@ -16,6 +16,7 @@ namespace IVS_ShopOnCoreMvc
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,15 +27,19 @@ namespace IVS_ShopOnCoreMvc
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
+            app.UseStatusCodePages();
+            app.UseStaticFiles();
+            app.UseMvcWithDefaultRoute(); //если в url не указан контроллер, то используется дефолт-страница index.htm и дефолт-контроллер
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            //app.UseRouting();
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapGet("/", async context =>
+            //    {
+            //        await context.Response.WriteAsync("Hello World!");
+            //    });
+            //});
         }
     }
 }
