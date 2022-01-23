@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace IVS_ShopOnCoreMvc.Data.Interfaces
 {
-    public interface IVehicles
+    interface IVehiclesCategory
     {
-        IEnumerable<Vehicle> Vehicles { get;}
-        IEnumerable<Vehicle> GetFavouriteVehicles { get; set; }
-        Vehicle GetObjectCar(Guid carId);
+        IEnumerable<Category> AllCategories { get; }
     }
 }
