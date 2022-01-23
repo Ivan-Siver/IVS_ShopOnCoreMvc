@@ -10,8 +10,7 @@ namespace IVS_ShopOnCoreMvc.Data.Mocks
     public class MockVehicles : IVehicles
     {
         private readonly IVehiclesCategory _vehiclesCategory;
-        public IEnumerable<Vehicle> Vehicles 
-        {
+        public IEnumerable<Vehicle> Vehicles {
             get {
                 return new List<Vehicle>
                 {
