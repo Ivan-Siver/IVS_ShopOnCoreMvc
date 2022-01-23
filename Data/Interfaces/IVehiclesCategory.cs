@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IVS_ShopOnCoreMvc.Data.Interfaces
 {
-    interface IVehiclesCategory
+    public interface IVehiclesCategory
     {
         IEnumerable<Category> AllCategories { get; }
     }
