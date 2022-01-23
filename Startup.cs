@@ -1,3 +1,5 @@
+using IVS_ShopOnCoreMvc.Data.Interfaces;
+using IVS_ShopOnCoreMvc.Data.Mocks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +18,8 @@ namespace IVS_ShopOnCoreMvc
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IVehicles, MockVehicles>();
+            services.AddTransient<IVehiclesCategory, MockVehiclesCategory>();
             services.AddMvc();
         }
 
